@@ -7,7 +7,7 @@ https://dino-chrome.com/fr
 
 ## ___Ce repository contient uniquement le code du site internet qui héberge le jeu vidéo.___
 
-## Repository du code du jeu vidéo : 
+## Repository du code du jeu vidéo :
 #### https://github.com/Szczapa/gamejam2023G4
 
 ### Membres du groupe :
@@ -19,7 +19,8 @@ https://dino-chrome.com/fr
 - CUREAUX Valentin - 3TEC-A
 
 ### Techonologies utilisées
-- Unity - Réalisation du jeu
-- Site internet :
+- Réalisation du jeu :
+    - Unity
+- Site internet : 
     - Frontend -> React
     - Backend -> ExpressJS - SQLite3
