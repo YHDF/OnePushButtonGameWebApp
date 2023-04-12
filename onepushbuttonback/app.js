@@ -19,7 +19,10 @@ const bootstrapErrors = require('./config/bootstrap/errorConfig')
 
 const app = express();
 
-app.use('/play', express.static(gameFolderPath));
+app.use('/play', expressStaticGzip(gameFolderPath, {
+  enableBrotli: true,
+  orderPreference: ['br']
+}));
 
 const DB_PATH = 'database/OPBG.db'
 
