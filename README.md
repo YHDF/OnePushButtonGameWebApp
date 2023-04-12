@@ -21,5 +21,5 @@ https://dino-chrome.com/fr
 ### Techonologies utilisées
 - Unity - Réalisation du jeu
 - Site internet :
-    - Frontend ->
+    - Frontend -> React
     - Backend -> ExpressJS - SQLite3
