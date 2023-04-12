@@ -17,3 +17,9 @@ https://dino-chrome.com/fr
 - TRUNET Mathieu - 4TEC-A
 - GILABERT Adam - 3TEC-A
 - CUREAUX Valentin - 3TEC-A
+
+### Techonologies utilisées
+- Unity - Réalisation du jeu
+- Site internet :
+    - Frontend ->
+    - Backend -> ExpressJS - SQLite3
