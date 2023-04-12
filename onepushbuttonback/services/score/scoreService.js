@@ -1,7 +1,5 @@
 const scoreRepository = require('../../repository/scoreRepository');
 
-const STATUS = require('../../entities/enums/statusMessage')
-
 
 /**
  * Enregistre le score le plus élevé en passant l'objet score au scoreRepository.
@@ -17,9 +15,6 @@ const saveHighestScore = async (score) => {
 
     const scoreObject = new scoreRepository();
     return await scoreObject.getScore(score).then((v) => {
-        if(v === STATUS.ERROR){
-            return v
-        }
         if (v?.value < parseInt(score.value)) {
             scoreObject.saveScore(score);
         }
@@ -27,7 +22,16 @@ const saveHighestScore = async (score) => {
     })
 }
 
+const getHighestScores = async (limit) => {
+
+    const scoreObject = new scoreRepository();
+    return await scoreObject.getTopScores(limit);
+}
+
+
+
 
 module.exports = {
-    saveHighestScore: saveHighestScore
+    saveHighestScore: saveHighestScore,
+    getHighestScores : getHighestScores
 }

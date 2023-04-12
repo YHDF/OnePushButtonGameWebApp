@@ -1,7 +1,7 @@
 const PlayerRepository = require('../../repository/playerRepository');
 
 const randomUUID = require("../../utils/identityGenerator");
-
+const Score = require("../../entities/score")
 /**
  * Enregistre un nouveau joueur en passant l'objet joueur au PlayerRepository.
  *
@@ -15,7 +15,12 @@ const randomUUID = require("../../utils/identityGenerator");
 
 const registerPlayer = async (player) => {
     const playerObject = new PlayerRepository();
-    return await playerObject.registerPlayer(player)
+    const score = new Score();
+    score.setId(randomUUID())
+    score.setPlayerUsername(player.username)
+    score.setValue("")
+    score.setDatePartie(new Date().toISOString().split('T')[0])
+    return await playerObject.registerPlayer(score)
 }
 
 

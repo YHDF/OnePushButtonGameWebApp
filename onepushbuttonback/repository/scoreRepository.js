@@ -36,7 +36,20 @@ module.exports = class ScoreRepository {
         
     }
 
-    log() {
+    async getTopScores(limit) {
+        const sqlStatement = `SELECT * FROM score LIKE ORDER BY value DESC LIMIT ?;`
+        const params = [limit]
+        return new Promise((resolve, reject ) => {
+            db.all(sqlStatement, params, (err, rows) => {
+                if (err) {
+                    return STATUS.ERROR;
+                }
+                resolve(rows)
+            })
+        });
+    }
+
+    toString() {
         console.log("ClassName :" + ScoreRepository.name)
     }
       

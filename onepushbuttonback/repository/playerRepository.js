@@ -9,9 +9,10 @@ module.exports = class PlayerRepository {
     }
 
     async registerPlayer(player) {
+        console.log(player)
         const sqlStatement = `INSERT INTO score VALUES(?, ?, ?, ?);`
-        const {id, username, value, date} = player
-        const params = [id, username, value, date]
+        const {id, playerUsername, value, datePartie} = player
+        const params = [id, playerUsername, value, datePartie]
         return new Promise((resolve, reject ) => {
             db.get(sqlStatement, params, (err, result) => {
                 if (err) {
@@ -22,7 +23,7 @@ module.exports = class PlayerRepository {
         });
     }
 
-    log() {
+    toString() {
         console.log("ClassName :" + PlayerRepository.name)
     }
       

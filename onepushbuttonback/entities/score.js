@@ -11,12 +11,8 @@ class Score {
      * @param {number} value - La valeur du score.
      * @param {Date} datePartie - La date de la partie.
      */
-    constructor(id, playerUsername, value, datePartie) {
-        this.id = id;
-        this.playerUsername = playerUsername;
-        this.value = value;
-        this.datePartie = datePartie;
-    }
+
+    constructor() {}
 
     // Getters
     getId() {
@@ -52,3 +48,6 @@ class Score {
         this.datePartie = datePartie;
     }
 }
+
+
+module.exports = Score
