@@ -1,7 +1,7 @@
 const express = require('express');
 const fs = require('fs');
 const debug = require('debug')
-const path = require('node:path');
+const path = require('path');
 
 const server = require('./bin/www');
 const db = require('./config/orm/database').db;
