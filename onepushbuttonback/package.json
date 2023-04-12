@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "nodemon ./bin/www",
-    "build" : "sudo npm i -g nodemon; npm i"
+    "build" : "npm i -g nodemon; npm i"
   },
   "dependencies": {
     "body-parser": "^1.20.2",
