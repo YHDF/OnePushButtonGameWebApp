@@ -1,38 +1,222 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&family=Space+Mono:ital@1&display=swap');
+html {
+    scroll-behavior: smooth;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+    --bg-color: #1d1e22;
+    --loader-bg: #121212;
+    --text-1: #fff;
+    --h1-font-size: 70px;
+    --main-font: 'Space Mono', monospace;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+* {
+    box-sizing: border-box;
+    -webkit-transition: all 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    -moz-transition: all 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    -o-transition: all 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: all 500ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+body {
+    background: var(--bg-color);
+    font-family: var(--main-font);
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
 }
 
-.App-link {
-  color: #61dafb;
+a {
+    color: inherit;
+    text-decoration: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.alley {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-image: url(https://i.pinimg.com/564x/87/02/59/87025968a011e4a32b13c997904c3fec.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: grayscale(20%);
+    -webkit-filter: grayscale(20%);
+    animation: flicker 2s ease-in-out infinite;
+}
+
+@keyframes flicker {
+    0% {
+        opacity: .5;
+        filter: grayscale(20%);
+    }
+    25% {
+        opacity: .7;
+        filter: grayscale(15%);
+    }
+    50% {
+        opacity: 1;
+        filter: grayscale(10%);
+    }
+    70% {
+        opacity: .7;
+        filter: grayscale(15%);
+    }
+    100% {
+        opacity: .5;
+        filter: grayscale(20%);
+    }
+}
+
+.raven {
+    height: 30vh;
+    width: 30vh;
+    float: right
+}
+
+#raven-pic {
+    height: 70%;
+    width: 70%;
+    opacity: 0;
+    animation: raven-swoop 5s ease-in-out 5s;
+}
+
+@keyframes raven-swoop {
+    0% {
+        transform: translateX(0vw);
+        opacity: .5;
+    }
+    25% {
+        margin-top: 10vh;
+    }
+    50% {
+        transform: translateX(-50vw);
+        margin-top: 20vh;
+        opacity: 1;
+    }
+    70% {
+        margin-top: 10vh;
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-150vw);
+        opacity: .5;
+    }
+}
+
+.cara {
+    height: 80vh;
+    width: 30vw;
+    margin: 0 auto;
+}
+
+#cara-pic {
+    height: 80%;
+    width: 80%;
+    margin-top: 33%;
+    animation: goth-girl 3s linear;
+}
+
+@keyframes goth-girl {
+    0% {
+        opacity: 0;
+        margin-bottom: -70vh;
+        transform: translateY(1000px);
+    }
+    50% {
+        opacity: .5;
+        margin-bottom: -30vh;
+    }
+    100% {
+        opacity: 1;
+        margin-bottom: 0;
+        height: 100%;
+        transform: trannslateY(0);
+    }
+}
+
+.text-box {
+    margin-top: 5%;
+    height: auto;
+    width: 35%;
+    color: var(--text-1);
+    background: var(--loader-bg);
+    text-align: center;
+    font-size: 1em;
+    letter-spacing: 0.8rem;
+    font-weight: bold;
+    opacity: 1;
+    text-transform: uppercase;
+    transition: all .2s ease;
+    animation: play-text 0.7s ease-out both;
+}
+
+.text-box:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+@keyframes play-text {
+    0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+    }
+    40% {
+        opacity: 0.6;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.slide1 {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-image: url(https://pngriver.com/wp-content/uploads/2018/04/Download-Galaxy-Transparent.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    filter: grayscale(20%);
+}
+
+#slide1-girl {
+    height: 45vh;
+    width: auto;
+    margin-top: 30vh;
+}
+
+.bats {
+    margin-top: 3%;
+    margin-left: 25%;
+    opacity: 0;
+    animation: bats-zoom 5s linear 1;
+}
+
+@keyframes bats-zoom {
+    0% {
+        opacity: .3;
+    }
+    30% {
+        opacity: .7;
+        height: 30vh;
+        width: 30vw;
+    }
+    60% {
+        opacity: 1;
+        height: 50vh;
+        width: 50vw;
+    }
+    90% {
+        opacity: .7;
+        height: 70vh;
+        width: 70vw;
+    }
+    100% {
+        opacity: .3;
+        height: 100vh;
+        width: 100vw;
+    }
 }
