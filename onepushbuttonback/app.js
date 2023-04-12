@@ -20,13 +20,14 @@ const bootstrapErrors = require('./config/bootstrap/errorConfig')
 const app = express();
 
 app.use('/play', expressStaticGzip(gameFolderPath, {
-  enableBrotli: true,
+  enableBrotli: false, // Disable Brotli compression
   customCompressions: [{
-    encodingName: 'br',
-    fileExtension: 'br'
+    encodingName: 'gzip',
+    fileExtension: 'gz'
   }],
-  orderPreference: ['br', 'gzip']
+  orderPreference: ['gz'] // Use gzip compression only
 }));
+
 
 const DB_PATH = 'database/OPBG.db'
 
