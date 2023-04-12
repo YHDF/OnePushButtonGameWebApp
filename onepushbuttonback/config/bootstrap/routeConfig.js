@@ -5,12 +5,14 @@ const playerRouter = require('../../routes/playerController');
 const gameRouter = require('../../routes/gameController');
 
 
-
 const bootstrapRoutes = (app) => {
     app.use('/', indexRouter);
     app.use('/scores',scoreRouter)
     app.use('/players',playerRouter)
     app.use('/game',gameRouter)
+    app.use('/*', (req, res, next) => {
+        res.redirect('/')
+    });
 }
 
 module.exports = bootstrapRoutes

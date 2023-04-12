@@ -1,7 +1,13 @@
 const express = require('express');
 const fs = require('fs');
-const debug = require('debug')
+const debug = require('debug');
 const path = require('path');
+const expressStaticGzip = require('express-static-gzip');
+
+const gameFolderPath = path.join(__dirname, 'public', 'buildtest');
+console.log(gameFolderPath)
+
+
 
 const server = require('./bin/www');
 const db = require('./config/orm/database').db;
@@ -12,6 +18,15 @@ const bootstrapRoutes = require('./config/bootstrap/routeConfig')
 const bootstrapErrors = require('./config/bootstrap/errorConfig')
 
 const app = express();
+
+app.use('/play', expressStaticGzip(gameFolderPath, {
+  enableBrotli: true,
+  customCompressions: [{
+    encodingName: 'br',
+    fileExtension: 'br'
+  }],
+  orderPreference: ['br', 'gzip']
+}));
 
 const DB_PATH = 'database/OPBG.db'
 
