@@ -5,6 +5,8 @@
 Jeu vidéo reprenant l'idée du jeu du dinosaure proposé par le navigateur Google Chrome.
 https://dino-chrome.com/fr
 
+### __Lien vers le site : https://www.notrejeu.com__
+
 ## ___Ce repository contient uniquement le code du site internet qui héberge le jeu vidéo.___
 
 ## Repository du code du jeu vidéo :
