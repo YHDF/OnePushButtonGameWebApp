@@ -1,22 +1,24 @@
-import cara from './assets/cara.gif';
-import Mace from './assets/Mace.gif';
+import Navbar from "./Navbar"
+import Game from "./pages/Game"
+import Home from "./pages/Home"
+import About from "./pages/About"
+import { Route, Routes } from "react-router-dom"
 import './App.css';
 
 function App() {
-    return ( <div className = "App">
-        <header className = "App-header">
-        <div className="alley">
-            <div className="raven">
-            <img src={Mace} id="raven-pic"/>  
-            </div>
-            <center>
-                <div className="text-box"><a href="#slide1"> Welcome to One button Apple Adventure</a></div>
-            </center>
-            <div className="cara" onmouseover="moveGirl()"><img src={cara} id="cara-pic"/></div>
-        </div>
-        </header> 
-        </div>
-    );
+  return (
+    <>
+      <Navbar />
+      <div className="container">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/game" element={<Game />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </div>
+    </>
+  )
 }
+
 
 export default App;
