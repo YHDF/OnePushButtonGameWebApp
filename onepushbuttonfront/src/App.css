@@ -20,7 +20,6 @@ html {
 }
 
 body {
-    background: var(--bg-color);
     font-family: var(--main-font);
     padding: 0;
     margin: 0;
@@ -43,7 +42,6 @@ a {
     background-size: cover;
     filter: grayscale(20%);
     -webkit-filter: grayscale(20%);
-    animation: flicker 2s ease-in-out infinite;
 }
 
 @keyframes flicker {
@@ -145,11 +143,12 @@ a {
     text-align: center;
     font-size: 1em;
     letter-spacing: 0.8rem;
-    font-weight: bold;
     opacity: 1;
     text-transform: uppercase;
     transition: all .2s ease;
     animation: play-text 0.7s ease-out both;
+    font-style: normal!;
+    border: #fff;
 }
 
 .text-box:hover {
@@ -219,4 +218,48 @@ a {
         height: 100vh;
         width: 100vw;
     }
+}
+
+.nav {
+    background-color: rgb(2, 2, 2);
+    text-shadow: #FC0 1px 0 10px !;
+    font-style: oblique;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+.nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav a {
+    color: inherit;
+    text-decoration: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: .25rem;
+    text-shadow: #FC0 1px 0 10px !important;
+}
+
+.nav li.active {
+    background-color: #555;
+}
+
+.nav li:hover {
+    background-color: #777;
+}
+
+#logo {
+    margin-top: 00px;
+    height: 100%;
+    width: 100px;
 }
