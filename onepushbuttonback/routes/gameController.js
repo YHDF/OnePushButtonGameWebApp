@@ -6,7 +6,7 @@ const fs = require('fs');
 const STATUS = require('../entities/enums/statusMessage')
 
 
-const gamePath = path.join(__dirname, '..', 'public', 'game', 'executables', 'sample.exe');
+const gamePath = path.join(__dirname, '..', 'public', 'game', 'executables', 'OBAA.rar');
 
 const downloadGame = (req, res, next) => {
     const words = gamePath.split('/');
