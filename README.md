@@ -5,10 +5,12 @@
 Jeu vidéo reprenant l'idée du jeu du dinosaure proposé par le navigateur Google Chrome.
 https://dino-chrome.com/fr
 
+#### _Lien vers le site du jeu : https://opbg.onrender.com/play_
+
 ## ___Ce repository contient uniquement le code du site internet qui héberge le jeu vidéo.___
 
-## Repository du code du jeu vidéo : 
-#### https://github.com/Szczapa/gamejam2023G4
+## Repository du code du jeu vidéo (Unity) :
+https://github.com/Szczapa/gamejam2023G4
 
 ### Membres du groupe :
 - KABBA Mohamed - 5TEC-A - Chef d'équipe
@@ -19,7 +21,8 @@ https://dino-chrome.com/fr
 - CUREAUX Valentin - 3TEC-A
 
 ### Techonologies utilisées
-- Unity - Réalisation du jeu
+- Réalisation du jeu :
+    - Unity
 - Site internet :
-    - Frontend ->
+    - Frontend -> React
     - Backend -> ExpressJS - SQLite3
