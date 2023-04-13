@@ -4,7 +4,7 @@ const debug = require('debug');
 const path = require('path');
 const expressStaticGzip = require('express-static-gzip');
 
-const gameFolderPath = path.join(__dirname, 'public', 'OPBG-build');
+const gameFolderPath = path.join(__dirname, 'public', 'Web-OBAA');
 console.log(gameFolderPath)
 
 
