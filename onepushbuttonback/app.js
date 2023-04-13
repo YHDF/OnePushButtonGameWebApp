@@ -4,7 +4,7 @@ const debug = require('debug');
 const path = require('path');
 const expressStaticGzip = require('express-static-gzip');
 
-const gameFolderPath = path.join(__dirname, 'public', 'buildtest');
+const gameFolderPath = path.join(__dirname, 'public', 'OPBG-build');
 console.log(gameFolderPath)
 
 
@@ -20,7 +20,7 @@ const bootstrapErrors = require('./config/bootstrap/errorConfig')
 const app = express();
 
 app.use('/play', expressStaticGzip(gameFolderPath, {
-  enableBrotli: true,
+  enableBrotli: false,
   orderPreference: ['br']
 }));
 

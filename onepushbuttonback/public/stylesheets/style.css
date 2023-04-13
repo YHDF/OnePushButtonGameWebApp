@@ -1,8 +1,100 @@
-body {
+/*body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}*/
+
+
+@font-face {
+  font-family: Pixelated;
+  src: url("/onepushbuttonback/public/fonts/PublicPixel-z84yD.ttf") format("truetype");
 }
 
 a {
-  color: #00B7FF;
+  color: rgb(26, 115, 232) !important;
+  text-decoration: none;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: rgb(245, 245, 245);
+  display: block;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  margin-left: 40%;
+  margin-top: 5%;
+}
+
+
+.icon-generic {
+  content: -webkit-image-set(url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABIAQMAAABvIyEEAAAABlBMVEUAAABTU1OoaSf/AAAAAXRSTlMAQObYZgAAAENJREFUeF7tzbEJACEQRNGBLeAasBCza2lLEGx0CxFGG9hBMDDxRy/72O9FMnIFapGylsu1fgoBdkXfUHLrQgdfrlJN1BdYBjQQm3UAAAAASUVORK5CYII=) 1x, url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJAAAACQAQMAAADdiHD7AAAABlBMVEUAAABTU1OoaSf/AAAAAXRSTlMAQObYZgAAAFJJREFUeF7t0cENgDAMQ9FwYgxG6WjpaIzCCAxQxVggFuDiCvlLOeRdHR9yzjncHVoq3npu+wQUrUuJHylSTmBaespJyJQoObUeyxDQb3bEm5Au81c0pSCD8HYAAAAASUVORK5CYII=) 2x);
+}
+
+.icon {
+  -webkit-user-select: none;
+  display: inline-block;
+}
+
+.icon {
+  height: 72px;
+  width: 72px;
+}
+
+.icon {
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+h1 span {
+  font-weight: 500;
+}
+
+h1 {
+  margin-top: 0;
+  word-wrap: break-word;
+}
+
+h1 {
+  color: var(--heading-color);
+  font-size: 1.6em;
+  font-weight: normal;
+  line-height: 1.25em;
+  margin-bottom: 16px;
+}
+
+
+.grey-container * {
+  font-size: 1em !important;
+  color: rgb(90, 90, 90);
+  text-align: start;
+}
+
+.error-code {
+  font-size: 0.7em !important;
+}
+
+
+
+
+
+
+
+
+
+.pixalated {
+  padding-left: 2em;
+  padding-right: 2em;
+  margin: 2em auto;
+  text-align: center;
+  border: none;
+  box-shadow:   -5px 0 0 0 black,
+                 5px 0 0 0 black,
+                 0 -5px 0 0 black,
+                 0 5px 0 0 black;
+  text-decoration: none;
+  background-color:transparent;
+  outline:none !important;
+  font-family: Pixelated;
+  color: black;
+  font-weight: 500;
 }

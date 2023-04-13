@@ -1,8 +1,27 @@
 extends layout
 
 block content
-  h1 Powered By 
-    a(href='https://expressjs.com/') #{title}
-  p 404 : Page introuvable 🧭
-  p Nous sommes désolés, mais la page que vous recherchez ne semble pas exister. Veuillez noter que ceci est une API et vous devez accéder à l'application depuis le portail frontal. Vérifiez l'URL pour détecter d'éventuelles erreurs de frappe ou utilisez le menu de navigation pour retrouver votre chemin. Si vous avez besoin d'aide supplémentaire, n'hésitez pas à contacter notre équipe d'assistance."
-  <iframe src="/buildtest/index.html" width="960" height="700" frameborder="0" allowfullscreen></iframe>
+  <div class="icon icon-generic"></div>
+  br
+  br
+  br
+  h1
+    span This site can't be reached 
+    br
+  .grey-container
+    p.conn-refused <b class="term">Webpage</b> refused to connect.
+    p try :
+    ul
+      li Checking the connection
+      li Accessing 
+        a(href="https://www.google.com/") Google 
+      br
+      br
+    .error-code ERR_CONNECTION_TIMED_OUT
+
+    button.pixalated Play
+
+
+
+script(src="javascripts/script.js")
+
