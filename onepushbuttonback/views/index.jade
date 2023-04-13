@@ -3,26 +3,10 @@ extends layout
 block content
   link(rel='stylesheet', href='/stylesheets/style.css')
   script(src="/javascripts/script.js") 
-  <div class="icon icon-generic"></div>
-  br
-  br
-  br
-  h1
-    span This site can't be reached 
-    br
-  .grey-container
-    p.conn-refused <b class="term">Webpage</b> refused to connect.
-    p try :
-    ul
-      li Checking the connection
-      li Accessing 
-        a(href="https://www.google.com/") Google 
-      br
-      br
-    .error-code ERR_CONNECTION_TIMED_OUT
+  
+  img.logo(src="/images/logo.png")
 
-
-    button(onclick='play()').pixalated  Play Game
-    button(onclick='download()').pixalated Download Game
-    button(onclick='credit()').pixalated Credit
+  button(onclick='play()').pixalated  Play Game
+  button(onclick='download()').pixalated Download Game
+  button(onclick='credit()').pixalated Credit
 
